@@ -1,0 +1,5 @@
+D:\react\react_file_uploader>npm init -y
+
+D:\react\react_file_uploader>git init
+
+
