@@ -15,3 +15,7 @@ D:\react\react_file_uploader>npm i express express-fileupload
 
 
     "client": "npm start --prefix client"	<< go to the client folder and then run npm start
+
+
+D:\react\react_file_uploader>npm run server
+
