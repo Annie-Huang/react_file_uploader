@@ -22,3 +22,6 @@ D:\react\react_file_uploader>npm run server
 D:\react\react_file_uploader>create-react-app client
 
 D:\react\react_file_uploader\client>npm i axios
+
+
+D:\react\react_file_uploader>npm run dev
