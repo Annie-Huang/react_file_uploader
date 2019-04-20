@@ -3,8 +3,8 @@ https://github.com/bradtraversy/react_file_uploader
 https://getbootstrap.com/docs/4.1/getting-started/introduction/
 https://fontawesome.com/start
 
-
-
+https://getbootstrap.com/docs/4.3/components/forms/#file-browser
+https://getbootstrap.com/docs/4.3/components/alerts/
 
 
 D:\react\react_file_uploader>npm init -y
