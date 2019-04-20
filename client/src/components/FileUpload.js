@@ -9,9 +9,17 @@ const FileUpload = () => {
         setFilename(e.target.files[0].name);
     };
 
+    const onSubmit = e => {
+        e.preventDefault();
+        const formData = new FormData();
+
+        // Because we got this in server.js: const file = req.files.file;
+        formData.append('file', file);
+    };
+
     return (
         <Fragment>
-            <form>
+            <form onSubmit={onSubmit}>
                 <div className="custom-file mb-4">
                     <input type="file" className="custom-file-input" id="customFile" onChange={onChange}/>
                     <label className="custom-file-label" htmlFor="customFile">
