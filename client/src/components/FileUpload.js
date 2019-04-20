@@ -33,6 +33,12 @@ const FileUpload = () => {
 
         } catch(err) {
 
+            if(err.response.status === 500) {
+                console.log('There was a problem with the server');
+            } else {
+                // Trying to print the msg from server.js: res.status(400).json({msg: 'No file uploaded'});
+                console.log(err.response.data.msg);
+            }
         }
     };
 
@@ -40,14 +46,24 @@ const FileUpload = () => {
         <Fragment>
             <form onSubmit={onSubmit}>
                 <div className="custom-file mb-4">
-                    <input type="file" className="custom-file-input" id="customFile" onChange={onChange}/>
+                    <input
+                        type="file"
+                        className="custom-file-input"
+                        id="customFile"
+                        onChange={onChange}
+                    />
                     <label className="custom-file-label" htmlFor="customFile">
                         {filename}
                     </label>
                 </div>
+
+                <input
+                    type="submit"
+                    value="Upload"
+                    className="btn btn-primary btn-block mt-4"
+                />
             </form>
 
-            <input type="submit" value="Upload" className="btn btn-primary btn-block mt-4"/>
         </Fragment>
     )
 };

@@ -16,12 +16,12 @@ app.post('/upload', (req, res) => {
     // __dirname is the current directory
     file.mv(`${__dirname}/client/public/uploads/${file.name}`, err => {
         if(err) {
-            console.log(err);
+            console.error(err);
             return res.status(500).send(err);
         }
 
         res.json({fileName: file.name, filePath: `/uploads/${file.name}`});
-    })
+    });
 });
 
 app.listen(5000, () => console.log('Server Started...'));
