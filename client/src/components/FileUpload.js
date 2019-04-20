@@ -9,6 +9,8 @@ const FileUpload = () => {
     // res.json({fileName: file.name, filePath: `/uploads/${file.name}`});
     const [uploadedFile, setUploadedFile] = useState({});
 
+    const [message, setMessage] = useState('');
+
     const onChange = e => {
         setFile(e.target.files[0]);
         setFilename(e.target.files[0].name);
@@ -34,10 +36,10 @@ const FileUpload = () => {
         } catch(err) {
 
             if(err.response.status === 500) {
-                console.log('There was a problem with the server');
+                setMessage('There was a problem with the server');
             } else {
                 // Trying to print the msg from server.js: res.status(400).json({msg: 'No file uploaded'});
-                console.log(err.response.data.msg);
+                setMessage(err.response.data.msg);
             }
         }
     };
