@@ -1,5 +1,6 @@
 https://stackoverflow.com/questions/45120248/nodemon-is-not-recognized-as-an-internal-command-error-in-windows-cmd/45120465
 https://getbootstrap.com/docs/4.1/getting-started/introduction/
+https://fontawesome.com/start
 
 D:\react\react_file_uploader>npm init -y
 
